@@ -74,7 +74,18 @@ html {
 .mobile-header {
     position: absolute;
     top: 20px;
+    left: 20px;
     right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .mobile-link {
@@ -82,11 +93,20 @@ html {
     text-decoration: none;
     font-size: 1.5rem;
     margin: 1rem 0;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid transparent;
+    text-align: center;
+    font-weight: 500;
 }
 
 .mobile-link:hover {
     color: #2aadd3;
+    background: rgba(42, 173, 211, 0.1);
+    border-color: rgba(42, 173, 211, 0.3);
+    transform: scale(1.05);
 }
 
 /* Notification */
@@ -157,10 +177,21 @@ html {
     cursor: pointer;
     color: #e3d9dc;
     transition: color 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .header-menu:hover {
     color: #2aadd3;
+    background: rgba(42, 173, 211, 0.1);
+    border-color: #2aadd3;
 }
 
 .splash-menu {
@@ -172,6 +203,17 @@ html {
     gap: 1rem;
 }
 
+.menu-logo {
+    margin-bottom: 1rem;
+}
+
+.menu-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
 .menu-item {
     display: flex;
     align-items: center;
@@ -179,13 +221,21 @@ html {
     color: #e3d9dc;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     opacity: 0.8;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent;
+    backdrop-filter: blur(10px);
 }
 
 .menu-item:hover {
     color: #2aadd3;
     opacity: 1;
+    background: rgba(42, 173, 211, 0.1);
+    border-color: rgba(42, 173, 211, 0.3);
+    transform: translateX(5px);
 }
 
 .splash-introduction {
@@ -830,9 +880,11 @@ html {
     .splash-menu {
         display: none;
     }
+}
 
-    .header-menu {
-        display: block;
+@media (min-width: 1201px) {
+    .splash-header {
+        display: none;
     }
 }
 
